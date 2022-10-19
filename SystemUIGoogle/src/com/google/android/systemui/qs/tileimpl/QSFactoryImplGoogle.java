@@ -26,6 +26,7 @@ import com.android.systemui.qs.tiles.AirplaneModeTile;
 import com.android.systemui.qs.tiles.AlarmTile;
 import com.android.systemui.qs.tiles.BluetoothTile;
 import com.android.systemui.qs.tiles.CameraToggleTile;
+import com.android.systemui.qs.tiles.CaffeineTile;
 import com.android.systemui.qs.tiles.CastTile;
 import com.android.systemui.qs.tiles.CellularTile;
 import com.android.systemui.qs.tiles.ColorCorrectionTile;
@@ -111,7 +112,8 @@ public class QSFactoryImplGoogle extends QSFactoryImpl {
             Provider<CPUInfoTile> cpuInfoTileProvider,
             Provider<FPSInfoTile> fpsInfoTileProvider,
             Provider<DataSwitchTile> dataSwitchTileProvider,
-            Provider<AutoBrightnessTile> autoBrightnessTileProvider) {
+            Provider<AutoBrightnessTile> autoBrightnessTileProvider,
+            Provider<CaffeineTile> caffeineTileProvider) {
         super(qsHostLazy,
                 customTileBuilderProvider,
                 wifiTileProvider,
@@ -148,7 +150,8 @@ public class QSFactoryImplGoogle extends QSFactoryImpl {
                 cpuInfoTileProvider,
                 fpsInfoTileProvider,
                 dataSwitchTileProvider,
-                autoBrightnessTileProvider);
+                autoBrightnessTileProvider,
+                caffeineTileProvider);
         mReverseChargingTileProvider = reverseChargingTileProvider;
         mBatterySaverTileGoogleProvider = batterySaverTileGoogleProvider;
     }

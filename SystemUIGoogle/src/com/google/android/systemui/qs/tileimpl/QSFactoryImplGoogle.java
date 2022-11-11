@@ -64,6 +64,7 @@ import com.android.systemui.qs.tiles.DataSwitchTile;
 import com.android.systemui.qs.tiles.AutoBrightnessTile;
 import com.android.systemui.qs.tiles.CPUInfoTile;
 import com.android.systemui.qs.tiles.DataSwitchTile;
+import com.android.systemui.qs.tiles.FPSInfoTile;
 
 import javax.inject.Inject;
 import javax.inject.Provider;
@@ -114,7 +115,8 @@ public class QSFactoryImplGoogle extends QSFactoryImpl {
             Provider<PowerShareTile> powerShareTileProvider,
             Provider<DataSwitchTile> dataSwitchTileProvider,
             Provider<AutoBrightnessTile> autoBrightnessTileProvider,
-            Provider<CPUInfoTile> cpuInfoTileProvider) {
+            Provider<CPUInfoTile> cpuInfoTileProvider,
+            Provider<FPSInfoTile> fpsInfoTileProvider) {
         super(qsHostLazy,
                 customTileBuilderProvider,
                 wifiTileProvider,
@@ -150,7 +152,8 @@ public class QSFactoryImplGoogle extends QSFactoryImpl {
                 powerShareTileProvider,
                 dataSwitchTileProvider,
                 autoBrightnessTileProvider,
-                cpuInfoTileProvider);
+                cpuInfoTileProvider,
+                fpsInfoTileProvider);
         mReverseChargingTileProvider = reverseChargingTileProvider;
         mBatterySaverTileGoogleProvider = batterySaverTileGoogleProvider;
     }

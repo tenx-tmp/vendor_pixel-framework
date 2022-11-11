@@ -60,6 +60,9 @@ import com.android.systemui.qs.tiles.PowerShareTile;
 // Custom TenX-OS
 import com.android.systemui.qs.tiles.DataSwitchTile;
 
+// Custom VoidUI Project
+import com.android.systemui.qs.tiles.DataSwitchTile;
+
 import javax.inject.Inject;
 import javax.inject.Provider;
 

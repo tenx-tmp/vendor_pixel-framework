@@ -62,6 +62,7 @@ import com.android.systemui.qs.tiles.DataSwitchTile;
 
 // Custom VoidUI Project
 import com.android.systemui.qs.tiles.AutoBrightnessTile;
+import com.android.systemui.qs.tiles.CPUInfoTile;
 import com.android.systemui.qs.tiles.DataSwitchTile;
 
 import javax.inject.Inject;
@@ -112,7 +113,8 @@ public class QSFactoryImplGoogle extends QSFactoryImpl {
             Provider<ReverseChargingTile> reverseChargingTileProvider,
             Provider<PowerShareTile> powerShareTileProvider,
             Provider<DataSwitchTile> dataSwitchTileProvider,
-            Provider<AutoBrightnessTile> autoBrightnessTileProvider) {
+            Provider<AutoBrightnessTile> autoBrightnessTileProvider,
+            Provider<CPUInfoTile> cpuInfoTileProvider) {
         super(qsHostLazy,
                 customTileBuilderProvider,
                 wifiTileProvider,
@@ -147,7 +149,8 @@ public class QSFactoryImplGoogle extends QSFactoryImpl {
                 dreamTileProvider,
                 powerShareTileProvider,
                 dataSwitchTileProvider,
-                autoBrightnessTileProvider);
+                autoBrightnessTileProvider,
+                cpuInfoTileProvider);
         mReverseChargingTileProvider = reverseChargingTileProvider;
         mBatterySaverTileGoogleProvider = batterySaverTileGoogleProvider;
     }

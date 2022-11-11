@@ -56,6 +56,7 @@ import com.google.android.systemui.qs.tiles.ReverseChargingTile;
 // Custom
 import com.android.systemui.qs.tiles.PowerShareTile;
 import com.android.systemui.qs.tiles.CPUInfoTile;
+import com.android.systemui.qs.tiles.FPSInfoTile;
 
 import javax.inject.Inject;
 import javax.inject.Provider;
@@ -103,7 +104,8 @@ public class QSFactoryImplGoogle extends QSFactoryImpl {
             Provider<ColorCorrectionTile> colorCorrectionTileProvider,
             Provider<ReverseChargingTile> reverseChargingTileProvider,
             Provider<PowerShareTile> powerShareTileProvider,
-            Provider<CPUInfoTile> cpuInfoTileProvider) {
+            Provider<CPUInfoTile> cpuInfoTileProvider,
+            Provider<FPSInfoTile> fpsInfoTileProvider) {
         super(qsHostLazy,
                 customTileBuilderProvider,
                 wifiTileProvider,
@@ -136,7 +138,8 @@ public class QSFactoryImplGoogle extends QSFactoryImpl {
                 oneHandedModeTileProvider,
                 colorCorrectionTileProvider,
                 powerShareTileProvider,
-                cpuInfoTileProvider);
+                cpuInfoTileProvider,
+                fpsInfoTileProvider);
         mReverseChargingTileProvider = reverseChargingTileProvider;
         mBatterySaverTileGoogleProvider = batterySaverTileGoogleProvider;
     }

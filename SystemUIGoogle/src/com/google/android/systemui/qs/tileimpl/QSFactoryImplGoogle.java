@@ -69,6 +69,7 @@ import com.android.systemui.qs.tiles.AntiFlickerTile;
 // Custom TenX-OS
 
 import com.android.systemui.qs.tiles.AutoBrightnessTile;
+import com.android.systemui.qs.tiles.CPUInfoTile;
 import com.android.systemui.qs.tiles.DataSwitchTile;
 
 import javax.inject.Inject;
@@ -128,7 +129,8 @@ public class QSFactoryImplGoogle extends QSFactoryImpl {
             Provider<ReadingModeTile> readingModeTileProvider,
             Provider<AntiFlickerTile> antiFlickerTileProvider,
             Provider<DataSwitchTile> dataSwitchTileProvider,
-            Provider<AutoBrightnessTile> autoBrightnessTileProvider) {
+            Provider<AutoBrightnessTile> autoBrightnessTileProvider,
+            Provider<CPUInfoTile> cpuInfoTileProvider) {
         super(qsHostLazy,
                 customTileBuilderProvider,
                 wifiTileProvider,
@@ -172,7 +174,8 @@ public class QSFactoryImplGoogle extends QSFactoryImpl {
                 readingModeTileProvider,
                 antiFlickerTileProvider,
                 dataSwitchTileProvider,
-                autoBrightnessTileProvider);
+                autoBrightnessTileProvider,
+                cpuInfoTileProvider);
         mReverseChargingTileProvider = reverseChargingTileProvider;
         mBatterySaverTileGoogleProvider = batterySaverTileGoogleProvider;
     }
